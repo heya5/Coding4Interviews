@@ -24,5 +24,53 @@
 
 **我们可以保存一个次小值，在最小值弹出后，将最小值赋值为这个次小值。然后更新这个次小值时，需要一个第三小的值。这样依次循环，我们还是需要为栈中的每个元素排序。能不能利用一个数据结构，来保存栈中的排序的元素？**
 
-此时可以用一个辅助栈，在入栈时，依次
+此时可以用一个辅助栈，在入栈时，如果新入栈的元素，小于最小值，就在入栈的同时, push进这个辅助栈。如果大于最小值，辅助栈就push一个当前最小值，也就是栈顶元素。
+
+在出栈时，数据栈和辅助栈都pop即可。
+
+**辅助栈的作用，其实是记录数据栈的每个状态下的最小值，所以辅助栈的大小一直和数据栈的大小是相同的。**
+
+
+
+## 代码
+
+```c
+class Solution {
+public:
+    stack<int> m_data;
+    stack<int> m_min;
+    void push(int value) {
+        m_data.push(value);
+        if( (m_min.empty()) ||(m_min.top() > value) )
+        {
+            m_min.push(value);
+        }
+        else{
+            m_min.push( m_min.top() );
+        }
+    }
+    void pop() {
+        m_data.pop();
+        m_min.pop();
+    }
+    int top() {
+        if(!m_data.empty())
+        {
+            return m_data.top();
+        }
+        else{
+            return -1;
+        }
+    }
+    int min() {
+        if( !m_min.empty() )
+        {
+            return m_min.top();
+        }
+        else{
+            return -1;
+        }
+    }
+};
+```
 
