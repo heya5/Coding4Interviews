@@ -19,8 +19,21 @@
 
 `strcmp()` 相当于两个字符串做减法，相等返回0，str1小于str2，返回负数。 str1大于str2，  返回正数。
 
+`vector.end() - 1` 才是vector末尾元素的指针
+
 
 
 ## 字符串处理
 
 ascii码为0的字符是'\0'
+
+`string s` 添加字符 `s.append(c, 3)` 把字符串c的前3个字符添加到s末尾， `s.append(c)` 把字符串c添加到s末尾。
+
+
+
+## STL相关
+
+size()的时间复杂度是O(1)还是O(n) 取决于STL的版本，和编译器有关，比如vc6中的size是O(1)， gcc中的size是O(n)。
+
+复制一个容器来初始化`vector<int> v(v_old)`
+
