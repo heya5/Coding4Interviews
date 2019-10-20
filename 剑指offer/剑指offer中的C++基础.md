@@ -44,11 +44,27 @@ size()的时间复杂度是O(1)还是O(n) 取决于STL的版本，和编译器�
 2) 基本操作:  
 
 ```c++
-unordered_ma<int, int> hash;  // 初始化
+unordered_map<int, int> hash;  // 初始化
 auto iter = hash.find(1)// 查找key, 如果存在则返回对应的迭代器，不存在则返回hash.end(). 和其他容器一样end()是没有元素的。
 int tmp = hash[1];  // 访问
 hash.insert( pair<int, int> (1, 2) ); // 插入
 hash.insert( {1, 2} ); //插入
 hash.erase(); // 删除
+iter->first; //迭代器的key
+iter->second; // 迭代器的value
 ```
 
+**set基本操作**
+
+和map的操作类似。但是访问set的最后一个元素时，不能用`*(mSet.end()-1)` ，会报错。 **用`*mSet.rbegin()` 是访问最后一个元素，表示反向迭代器的第一个元素。** 
+
+
+
+## 常用宏
+
+```c++
+INT_MAX, INT_MIN // int的最大值, 最小值
+LONG_MAX, LONG_MIN // long long 的最大值，最小值, 64位
+```
+
+看变量占几个字节用`sizeof()`, long 和long long 都是8位。
