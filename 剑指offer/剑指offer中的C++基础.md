@@ -33,6 +33,8 @@ ascii码为0的字符是'\0'
 
 ## STL相关
 
+二维动态数组初始化 `    vector< vector<int> > dp(ncols,vector<int>(nrows, 0));`
+
 size()的时间复杂度是O(1)还是O(n) 取决于STL的版本，和编译器有关，比如vc6中的size是O(1)， gcc中的size是O(n)。
 
 复制一个容器来初始化`vector<int> v(v_old)`
