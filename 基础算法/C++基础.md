@@ -70,3 +70,16 @@ LONG_MAX, LONG_MIN // long long 的最大值，最小值, 64位
 ```
 
 看变量占几个字节用`sizeof()`, long 和long long 都是8位。
+
+
+
+## algorithm的函数
+
+`inplace_merge()`  合并两个有序区间, 
+
+```
+  void inplace_merge (BidirectionalIterator first, BidirectionalIterator middle,
+                      BidirectionalIterator last);
+```
+
+两个区间都是用左闭右开表示。
