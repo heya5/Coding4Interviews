@@ -29,6 +29,8 @@ ascii码为0的字符是'\0'
 
 `string s` 添加字符 `s.append(c, 3)` 把字符串c的前3个字符添加到s末尾， `s.append(c)` 把字符串c添加到s末尾。
 
+`s.substr(int begin, int N)` 从下标begin开始， 拷贝N个元素。
+
 
 
 ## STL相关
