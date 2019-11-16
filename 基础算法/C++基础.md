@@ -22,6 +22,8 @@
 
 `sort()`  参数是两个指针，默认升序。
 
+**sort自定义cmp：** 1） 返回的是bool，排序之后的元素能满足true, 最好加上static（表示只能在本文件中调用，leetcode上必须加上这个）； 2）传入的是const引用，第一个参数表示排序后位置在前面的元素
+
 `swap()`   
 
 `sprintf( char *buffer, const char *format [, argument] … )` 打印数据到一个字符串变量。
@@ -56,6 +58,10 @@ size()的时间复杂度是O(1)还是O(n) 取决于STL的版本，和编译器�
 
 复制一个容器来初始化`vector<int> v(v_old)`
 
+**vector基本操作**
+
+`v.insert(v.begin()+pos, element)` 将pos处插入一个element的拷贝
+
 **哈希表基本操作:**
 
 1) map和unordered_map的区别，unordered_map中的key不是排序的，如果想获得排序后的数据，或打印具有一定顺序的元素，用map; 如果只是想记录数据，用unordered_map. map查找和插入的时间复杂度是O(logn), unordered_map查找和插入的平均时间复杂度是O(1), 最坏是O(n)
@@ -72,6 +78,8 @@ hash.erase(); // 删除
 iter->first; //迭代器的key
 iter->second; // 迭代器的value
 ```
+
+unordered_map的key可以是字符串，但不能是整数数组。value可以是任何数据结构。
 
 **set基本操作**
 
