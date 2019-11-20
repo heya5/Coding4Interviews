@@ -20,7 +20,7 @@
 
 二维数组如果全局变量，初始值全部是0。如果不是全局变量，初始值是随机的，需要手动初始化。
 
-
+`memset(next,0,sizeof(next))`  以next为起始地址，把之后的`sizeof(next)`个字节初始化为0。**只能初始化为0或-1。**
 
 ## 常用函数
 
@@ -116,6 +116,20 @@ LONG_MAX, LONG_MIN // long long 的最大值，最小值, 64位
 ```
 
 两个区间都是用左闭右开表示。
+
+**二分查找**
+
+```c++
+// 查找数组中是否存在val
+bool binary_search (ForwardIterator first, ForwardIterator last,
+                      const T& val);
+// 查找数组中第一个大于等于val的元素的下标）
+ForwardIterator lower_bound (ForwardIterator first, ForwardIterator last,
+                               const T& val);
+// 查找第一个 大于 val的元素下标
+ForwardIterator upper_bound (ForwardIterator first, ForwardIterator last,
+                               const T& val);
+```
 
 
 
