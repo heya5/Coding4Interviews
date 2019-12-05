@@ -137,11 +137,13 @@ LONG_MAX, LONG_MIN // long long 的最大值，最小值, 64位
 
 **二分查找**
 
+`lower_bound()` 是最常用的，一定要记住，返回第一个**大于等于val**的下标。在有序数组中查找val，是可能有多个取值为val的元素，这些元素组成一个连续区间，`lower_bound` 就是指这个区间的下界，`upper_bound` 指的就是整个区间的上界。
+
 ```c++
 // 查找数组中是否存在val
 bool binary_search (ForwardIterator first, ForwardIterator last,
                       const T& val);
-// 查找数组中第一个大于等于val的元素的下标）
+// 查找数组中第一个大于等于val的元素的下标
 ForwardIterator lower_bound (ForwardIterator first, ForwardIterator last,
                                const T& val);
 // 查找第一个 大于 val的元素下标
