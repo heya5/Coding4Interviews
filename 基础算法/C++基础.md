@@ -157,3 +157,10 @@ ForwardIterator upper_bound (ForwardIterator first, ForwardIterator last,
 
 位运算优先级非常低。保险起见，都加括号。
 
+
+
+## 模板的使用
+
+调用：
+
+如 `swap<int> (a, b)`
