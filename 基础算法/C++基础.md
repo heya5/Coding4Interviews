@@ -68,6 +68,8 @@ size()的时间复杂度是O(1)还是O(n) 取决于STL的版本，和编译器�
 
 `v.insert(v.begin()+pos, element)` 将pos处插入一个element的拷贝
 
+`vector<int> tmp(v.begin(), v.begin()+2)`  拷贝子数组
+
 **哈希表基本操作:**
 
 1) map和unordered_map的区别，unordered_map中的key不是排序的，如果想获得排序后的数据，或打印具有一定顺序的元素，用map; 如果只是想记录数据，用unordered_map. map查找和插入的时间复杂度是O(logn), unordered_map查找和插入的平均时间复杂度是O(1), 最坏是O(n)
