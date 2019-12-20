@@ -137,6 +137,10 @@ LONG_MAX, LONG_MIN // long long 的最大值，最小值, 64位
 
 两个区间都是用左闭右开表示。
 
+`reverse(vec.begin(), vec.end())` 翻转数组
+
+`reverse_copy(vec.begin(), vec.end())` 翻转并拷贝
+
 **二分查找**
 
 `lower_bound()` 是最常用的，一定要记住，返回第一个**大于等于val**的下标。在有序数组中查找val，是可能有多个取值为val的元素，这些元素组成一个连续区间，`lower_bound` 就是指这个区间的下界，`upper_bound` 指的就是整个区间的上界。
