@@ -113,6 +113,24 @@ dq.push_front();
 dq.pop_front();
 ```
 
+**优先队列**
+
+```c++
+// 一般当作堆来使用，避免手写，但是需要额外空间。
+// priority_queue<Type, Container, Functional>
+// Type表示数据类型， Container表示容器，一般就是vector<>， Functional表示排序方式
+
+//升序队列
+priority_queue <int,vector<int>,greater<int> > q;
+//降序队列
+priority_queue <int,vector<int>,less<int> >q;
+// less, greater是c++自带的仿函数
+int x = q.top() // 队头元素
+q.push(x) // 插入元素到队尾，并排序
+q.pop() // 弹出对头元素
+    
+```
+
 
 
 ## 常用宏
