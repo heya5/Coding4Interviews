@@ -103,6 +103,20 @@ unordered_map的key可以是字符串，但不能是整数数组。value可以�
 
 list可以看作一个双端队列，头尾插入的时间复杂度是O(1),  **删除一个已知节点的时间复杂度也是O(1)**。
 
+从尾节点循环创建链表：
+
+```c++
+// 新建节点后，节点的next指向上一个创建的节点。
+ListNode* node = nullptr;
+for(int i=0;i<nums.size();i++) {
+	ListNode* old = node;
+    node = new ListNode( num[i] );
+    node->next = old;
+}
+```
+
+
+
 **双向队列**
 
 ```c++
