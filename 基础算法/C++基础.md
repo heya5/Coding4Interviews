@@ -160,14 +160,27 @@ LONG_MAX, LONG_MIN // long long 的最大值，最小值, 64位
 
 ## algorithm的函数
 
-`inplace_merge()`  合并两个有序区间, 
+`inplace_merge()`  合并**一个数组的**两个有序区间, 
 
 ```
-  void inplace_merge (BidirectionalIterator first, BidirectionalIterator middle,
+void inplace_merge (BidirectionalIterator first, BidirectionalIterator middle,
                       BidirectionalIterator last);
 ```
 
 两个区间都是用左闭右开表示。
+
+`merge()` 合并两个数组的指定区间, 
+
+ ```c++
+// result的空间需要手动分配 
+OutputIterator merge (InputIterator1 first1, InputIterator1 last1,
+                        InputIterator2 first2, InputIterator2 last2,
+                        OutputIterator result);
+ ```
+
+
+
+
 
 `reverse(vec.begin(), vec.end())` 翻转数组
 
