@@ -22,6 +22,12 @@
 
 `memset(next,0,sizeof(next))`  以next为起始地址，把之后的`sizeof(next)`个字节初始化为0。**只能初始化为0或-1。**
 
+字符串初始化 `string s(7, 'a') // 7个a`
+
+字符串vector初始化 `vector<string> vec(2, string(3,'a'))` 
+
+新建长度为n的bool数组 `bool* arr = new bool[n]`
+
 ## 常用函数
 
 `sort()`  参数是两个指针，默认升序。
